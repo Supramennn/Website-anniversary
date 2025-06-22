@@ -2,64 +2,76 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anniversary Kita</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu, Cintaku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="landing bg-pink-100 flex items-center justify-center h-screen overflow-hidden relative">
-  <div id="welcome-overlay"
-    class="fixed inset-0 bg-pink-100 z-50 flex flex-col items-center justify-center text-center">
-    <h1 class="text-3xl md:text-5xl font-bold text-pink-700 mb-4">Hai Kamu!</h1>
-    <p class="text-pink-600 mb-8">Ada surat spesial buat kamu...</p>
-    <button id="start-button"
-      class="px-8 py-3 bg-pink-600 text-white font-bold rounded-full shadow-lg hover:bg-pink-700 transition-all transform hover:scale-110">
-      Buka Sekarang 💖
-    </button>
-  </div>
+<body>
 
-  <div id="main-content" class="hidden w-full h-full flex items-center justify-center">
-    <div class="absolute inset-0 overflow-hidden z-0">
-      <div class="heart bg-pink-300"></div>
-      <div class="heart bg-pink-400 delay-1"></div>
-      <div class="heart bg-pink-200 delay-2"></div>
+    <div class="container">
+        <div id="envelope-icon" class="envelope-wrapper">
+            <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <p class="open-text">Sentuh untuk membuka</p>
+        </div>
+
+        <div class="hearts-container"></div>
+
+        <div class="letter-wrapper">
+            <div class="letter">
+                <div class="letter-content">
+                    <div class="reveal-text">
+                        <h1 class="elegant-font">Untuk Wanita Hebatku, Hanifa Putria Sahanas</h1>
+                        <p class="date">Bekasi, 27 Juli 2025</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p>Hai sayang,</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p><strong style="color: #c2185b;">Selamat hari jadi 1 Tahun</strong>, Aku masih sering
+                            senyum-senyum sendiri kalau ingat <strong style="color: #c2185b;"> pertemuan pertama kali
+                                kita aku jemput kamu pulang kerja</strong>. Waktu terasa cepat
+                            ya, tapi perasaanku ke kamu justru makin kuat setiap harinya.</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p>Aku lihat semua usahamu. Caramu menyayangi keluargamu dengan tulus itu luar biasa, dan aku
+                            sangat bangga padamu. Kamu itu hebat, benar-benar hebat.</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p>Tapi justru karena kamu sehebat itu, aku mau kamu janji satu hal. Tolong, sayangi dirimu
+                            sendiri sama besarnya seperti kamu menyayangi orang lain. Jangan bohongi dirimu dengan
+                            bilang "nggak apa-apa" saat kamu lelah. Bahu aku selalu ada buat kamu bersandar, kapanpun
+                            kamu butuh.</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p>Terima kasih sudah memilihku dan membuat duniaku jauh lebih berwarna. Mari kita buat lebih
+                            banyak lagi cerita indah bersama.</p>
+                    </div>
+                    <div class="reveal-text">
+                        <p>Aku sayang kamu, selalu.</p>
+                        <p class="signature">Noval Suprayoga</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <button id="music-toggle"
-      class="fixed bottom-5 right-5 z-20 w-12 h-12 rounded-full bg-pink-500 text-white flex items-center justify-center shadow-lg transition-transform transform hover:scale-110">
-      <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-      <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </button>
+    <audio id="background-music" loop>
+        <source src="Ed Sheeran - Perfect.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
 
-    <div class="absolute top-0 left-0 right-0 pt-20 px-6 text-center z-10">
-      <h1 class="text-4xl md:text-6xl font-bold text-pink-700 mb-6" id="title">Selamat Anniversary ❤️</h1>
-      <p class="text-lg text-pink-600" id="subtitle">Buat kamu yang selalu jadi alasanku tersenyum tiap hari</p>
-    </div>
-
-    <div class="relative z-10">
-      <a href="surat.html" id="open-letter" class="btn-envelope" aria-label="Baca Surat">
-        <img src="assets/images/envelope.png" alt="Icon Amplop" />
-      </a>
-    </div>
-  </div>
-
-  <audio id="bg-music" loop>
-    <source src="assets/audio/your-song.mp3" type="audio/mpeg">
-  </audio>
-
-  <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
